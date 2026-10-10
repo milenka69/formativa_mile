@@ -4,6 +4,7 @@ class Destino(models.Model):
     nombre = models.CharField(max_length=120)
     pais = models.CharField(max_length=120)
     descripcion = models.TextField(blank=True, null=True, default='Sin descripción')
+    activo = models.BooleanField(default=True)
 
     def __str__(self):
         return self.nombre
